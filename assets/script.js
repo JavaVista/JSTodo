@@ -6,7 +6,11 @@ const model = {
     addTodo(todo) {
         this.todos.push(todo);
         this.displayTodos();
+    },
+    changeTodo(index, value) {
+        this.todos[index] = value;
+        this.displayTodos();
     }
 };
 
-model.addTodo('testOut');
+model.changeTodo(1, 'testOut2');
