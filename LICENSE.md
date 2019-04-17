@@ -1,4 +1,14 @@
-MIT License
+# PROJECT LICENSE
+
+This project was submitted by Javier Carrion as part of practicing my skills and developing muscle memory.
+
+Me, the author of the project, allows you to check the code as a reference. If you clone this project, it's your own responsibility. I will not be responsible for any unintended results the code has caused to any businesses or personal projects.
+
+If you are learning and if you submit this project, your submissions must be your own work, hence, bare in mind you might break an honor code the institution has set forth. Your submissions must be your own work.
+
+Besides the above notice, the following license applies and this license notice must be included in all works derived from this project.
+
+## MIT License
 
 Copyright (c) 2019 Javier Carrion
 
