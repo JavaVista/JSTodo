@@ -10,7 +10,11 @@ const model = {
     changeTodo(index, value) {
         this.todos[index] = value;
         this.displayTodos();
+    },
+    deleteTodo(index) {
+        this.todos.splice(index, 1);
+        this.displayTodos();
     }
 };
 
-model.changeTodo(1, 'testOut2');
+model.deleteTodo(1);
