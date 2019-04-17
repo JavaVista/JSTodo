@@ -10,6 +10,8 @@ Simple Vanilla JS Todo 📔 App
 - GitHub - [https://github.com/JavaVista/](https://github.com/JavaVista/)
 - LinkedIn - [Javier Carrion](https://www.linkedin.com/in/technologic)
 
+## Contributing
+
 ### License
 
 Distributed under the MIT License. Note: Copyright and license text of third party modules are included in their source code.
