@@ -1,10 +1,13 @@
 const model = {
-    todos: ['test1', 'test2', 'test3'],
+    todos: [],
     displayTodos() {
         console.log('Hey', this.todos);
     },
     addTodo(todo) {
-        this.todos.push(todo);
+        this.todos.push({
+            todo: todo,
+            completed: false
+        });
         this.displayTodos();
     },
     changeTodo(index, value) {
@@ -17,4 +20,4 @@ const model = {
     }
 };
 
-model.deleteTodo(1);
+model.addTodo('test2');
