@@ -10,8 +10,8 @@ const model = {
         });
         this.displayTodos();
     },
-    changeTodo(index, value) {
-        this.todos[index] = value;
+    changeTodo(index, todo) {
+        this.todos[index].todo = todo;
         this.displayTodos();
     },
     deleteTodo(index) {
@@ -20,4 +20,6 @@ const model = {
     }
 };
 
-model.addTodo('test2');
+// test
+model.addTodo('test4');
+model.changeTodo(0, 'changed2');
