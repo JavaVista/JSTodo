@@ -17,9 +17,14 @@ const model = {
     deleteTodo(index) {
         this.todos.splice(index, 1);
         this.displayTodos();
+    },
+    toggleCompleted(index) {
+        const todo = this.todos[index];
+        todo.completed = !todo.completed;
+        this.displayTodos();
     }
 };
 
 // test
-model.addTodo('test4');
-model.changeTodo(0, 'changed2');
+model.addTodo('test5');
+model.toggleCompleted(0);
