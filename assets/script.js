@@ -1,7 +1,10 @@
 const model = {
     todos: [],
     displayTodos() {
-        console.log('Hey', this.todos);
+       console.log('Hey my todos list:');
+        this.todos.forEach((todoContent, index) => {
+            console.log(index, todoContent.todo)
+        });
     },
     addTodo(todo) {
         this.todos.push({
@@ -26,5 +29,6 @@ const model = {
 };
 
 // test
-model.addTodo('test5');
+model.addTodo('test1');
+model.addTodo('test2');
 model.toggleCompleted(0);
