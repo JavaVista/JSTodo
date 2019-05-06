@@ -1,7 +1,7 @@
 const model = {
     todos: [],
     displayTodos() {
-       console.log('Hey my todos list:');
+        this.todos.length === 0 ? console.log('List is empty') : console.log('My todos list:');
         this.todos.forEach((todoContent, index) => {
             console.log(index, todoContent.todo)
         });
@@ -29,6 +29,8 @@ const model = {
 };
 
 // test
-model.addTodo('test1');
-model.addTodo('test2');
-model.toggleCompleted(0);
+model.displayTodos();
+model.addTodo('item 1');
+model.addTodo('item 2');
+model.deleteTodo(0);
+model.deleteTodo(0);
