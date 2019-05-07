@@ -31,13 +31,27 @@ const model = {
 		todo.completed = !todo.completed;
 		this.displayTodos();
 	},
+	toggleAll() {
+		const totalTodos = this.todos.length;
+		let completedTodos = 0;
+		// get number of todos
+		this.todos.forEach(todoContent => {
+			todoContent.completed === true ? completedTodos++ : completedTodos;
+		})
+		// If everything is true then make false
+		completedTodos === totalTodos ? this.todos.forEach(todoContent => {
+			todoContent.completed = false;
+		}) : this.todos.completed;
+		this.displayTodos();
+	}
 };
 
 // test
-model.displayTodos();
-model.addTodo('item 1');
+
+/* model.addTodo('item 1');
 model.addTodo('item 2');
+model.toggleCompleted(1);
 model.toggleCompleted(0);
-model.toggleCompleted(1);
-model.toggleCompleted(1);
+model.toggleAll();
+model.toggleAll(); */
 
