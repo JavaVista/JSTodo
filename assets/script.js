@@ -38,20 +38,22 @@ const model = {
 		this.todos.forEach(todoContent => {
 			todoContent.completed === true ? completedTodos++ : completedTodos;
 		})
-		// If everything is true then make false
+		// If everything is true then make false and otherwise
 		completedTodos === totalTodos ? this.todos.forEach(todoContent => {
 			todoContent.completed = false;
-		}) : this.todos.completed;
+		}) : this.todos.forEach(todoContent => {
+			todoContent.completed = true;
+		});
 		this.displayTodos();
 	}
 };
 
 // test
 
-/* model.addTodo('item 1');
+model.addTodo('item 1');
 model.addTodo('item 2');
+model.addTodo('item 3');
 model.toggleCompleted(1);
-model.toggleCompleted(0);
+// model.toggleCompleted(0);
 model.toggleAll();
-model.toggleAll(); */
-
+model.toggleAll();
