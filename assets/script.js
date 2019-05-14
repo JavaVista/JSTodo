@@ -48,12 +48,18 @@ const model = {
 	}
 };
 
+const displayButton = document.getElementById('displayButton');
+
+displayButton.addEventListener('click', () => {
+	model.displayTodos();
+});
 // test
 
+
 model.addTodo('item 1');
-model.addTodo('item 2');
-model.addTodo('item 3');
-model.toggleCompleted(1);
+// model.addTodo('item 2');
+// model.addTodo('item 3');
+// model.toggleCompleted(1);
 // model.toggleCompleted(0);
-model.toggleAll();
-model.toggleAll();
+// model.toggleAll();
+// model.toggleAll();
