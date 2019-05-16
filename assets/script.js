@@ -27,7 +27,7 @@ const model = {
 		this.displayTodos();
 	},
 	toggleCompleted(index) {
-        const todo = this.todos[index];
+		const todo = this.todos[index];
 		todo.completed = !todo.completed;
 		this.displayTodos();
 	},
@@ -37,28 +37,33 @@ const model = {
 		// get number of todos
 		this.todos.forEach(todoContent => {
 			todoContent.completed === true ? completedTodos++ : completedTodos;
-		})
-		// If everything is true then make false and otherwise
-		completedTodos === totalTodos ? this.todos.forEach(todoContent => {
-			todoContent.completed = false;
-		}) : this.todos.forEach(todoContent => {
-			todoContent.completed = true;
 		});
+		// If everything is true then make false and otherwise
+		completedTodos === totalTodos
+			? this.todos.forEach(todoContent => {
+					todoContent.completed = false;
+			  })
+			: this.todos.forEach(todoContent => {
+					todoContent.completed = true;
+			  });
 		this.displayTodos();
-	}
+	},
 };
 
 const displayButton = document.getElementById('displayButton');
+const toggleAllButton = document.getElementById('toggleAllButton');
 
 displayButton.addEventListener('click', () => {
 	model.displayTodos();
 });
+toggleAllButton.addEventListener('click', () => {
+	model.toggleAll();
+});
 // test
 
-
 model.addTodo('item 1');
-// model.addTodo('item 2');
-// model.addTodo('item 3');
+model.addTodo('item 2');
+model.addTodo('item 3');
 // model.toggleCompleted(1);
 // model.toggleCompleted(0);
 // model.toggleAll();
