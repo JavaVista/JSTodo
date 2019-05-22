@@ -50,20 +50,20 @@ const model = {
 	},
 };
 
-const displayButton = document.getElementById('displayButton');
-const toggleAllButton = document.getElementById('toggleAllButton');
+const controller = {
+	display() {
+		model.displayTodos();
+	},
+	toggleAll() {
+		model.toggleAll();
+	}
+};
 
-displayButton.addEventListener('click', () => {
-	model.displayTodos();
-});
-toggleAllButton.addEventListener('click', () => {
-	model.toggleAll();
-});
 // test
 
-model.addTodo('item 1');
-model.addTodo('item 2');
-model.addTodo('item 3');
+// model.addTodo('item 1');
+// model.addTodo('item 2');
+// model.addTodo('item 3');
 // model.toggleCompleted(1);
 // model.toggleCompleted(0);
 // model.toggleAll();
