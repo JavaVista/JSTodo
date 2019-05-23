@@ -56,6 +56,11 @@ const controller = {
 	},
 	toggleAll() {
 		model.toggleAll();
+	},
+	addTodo() {
+		const addTodoInput = document.getElementById('addTodoInput');
+		model.addTodo(addTodoInput.value);
+		addTodoInput.value = '';
 	}
 };
 

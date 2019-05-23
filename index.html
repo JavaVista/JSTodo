@@ -18,8 +18,14 @@
 	</head>
 	<body>
 		<h1>To-Do List</h1>
-		<button onclick="controller.display()">Show List</button>
-		<button onclick="controller.toggleAll()">Toggle All</button>
+		<div>
+			<button onclick="controller.display()">Show List</button>
+			<button onclick="controller.toggleAll()">Toggle All</button>
+		</div>
+		<div>
+			<input type="text" name="" id="addTodoInput">
+			<button onclick="controller.addTodo()">Add</button>
+		</div>
         <script src="assets/script.js"></script>
     </body>
 </html>
