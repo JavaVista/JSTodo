@@ -61,6 +61,13 @@ const controller = {
 		const addTodoInput = document.getElementById('addTodoInput');
 		model.addTodo(addTodoInput.value);
 		addTodoInput.value = '';
+	},
+	changeTodo() {
+		const changePosition = document.getElementById('changePosition');
+		const changeText = document.getElementById('changeText');
+		model.changeTodo(changePosition.valueAsNumber, changeText.value);
+		changePosition.value = '';
+		changeText.value = '';
 	}
 };
 
