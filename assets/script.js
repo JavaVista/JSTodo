@@ -67,7 +67,12 @@ const controller = {
 		const changeText = document.getElementById('changeText');
 		model.changeTodo(changePosition.valueAsNumber, changeText.value);
 		changePosition.value = '';
-		changeText.value = '';
+		changeText.valueAsNumber = '';
+	},
+	delete() {
+		const deletePosition = document.getElementById('deletePosition');
+		model.deleteTodo(deletePosition.valueAsNumber);
+		deletePosition.valueAsNumber = '';
 	}
 };
 
