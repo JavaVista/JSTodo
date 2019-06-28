@@ -54,9 +54,6 @@ const controller = {
 	display() {
 		model.displayTodos();
 	},
-	toggleAll() {
-		model.toggleAll();
-	},
 	addTodo() {
 		const addTodoInput = document.getElementById('addTodoInput');
 		model.addTodo(addTodoInput.value);
@@ -73,6 +70,14 @@ const controller = {
 		const deletePosition = document.getElementById('deletePosition');
 		model.deleteTodo(deletePosition.valueAsNumber);
 		deletePosition.valueAsNumber = '';
+	},
+	toggleCompleted() {
+		const toggleCompletedPosition = document.getElementById('toggleCompletedPosition');
+		model.toggleCompleted(toggleCompletedPosition.valueAsNumber);
+		toggleCompletedPosition.valueAsNumber = '';
+	},
+	toggleAll() {
+		model.toggleAll();
 	}
 };
 
