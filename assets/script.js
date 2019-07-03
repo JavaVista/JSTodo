@@ -81,6 +81,17 @@ const controller = {
 	}
 };
 
+const view = {
+	display() {
+		const todosUl = document.querySelector('ul');
+		todosUl.innerHTML = '';
+		model.todos.forEach(todo => {
+			const todoLi = document.createElement('li');
+			todosUl.appendChild(todoLi);
+		});
+	}
+}
+
 // test
 
 // model.addTodo('item 1');
