@@ -85,8 +85,9 @@ const view = {
 	display() {
 		const todosUl = document.querySelector('ul');
 		todosUl.innerHTML = '';
-		model.todos.forEach(todo => {
+		model.todos.forEach(todoItem => {
 			const todoLi = document.createElement('li');
+			todoLi.textContent = todoItem.todo;
 			todosUl.appendChild(todoLi);
 		});
 	}
