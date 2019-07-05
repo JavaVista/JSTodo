@@ -1,35 +1,20 @@
 const model = {
 	todos: [],
-	displayTodos() {
-		this.todos.length === 0
-			? console.log('List is empty')
-			: console.log('My todos list:');
-		this.todos.forEach((todoContent, index) => {
-			// check if todo is completed
-			todoContent.completed
-				? console.log(`(X) ${todoContent.todo}`)
-				: console.log(`( ) ${todoContent.todo}`);
-		});
-	},
 	addTodo(todo) {
 		this.todos.push({
 			todo: todo,
 			completed: false,
 		});
-		this.displayTodos();
 	},
 	changeTodo(index, todo) {
 		this.todos[index].todo = todo;
-		this.displayTodos();
 	},
 	deleteTodo(index) {
 		this.todos.splice(index, 1);
-		this.displayTodos();
 	},
 	toggleCompleted(index) {
 		const todo = this.todos[index];
 		todo.completed = !todo.completed;
-		this.displayTodos();
 	},
 	toggleAll() {
 		const totalTodos = this.todos.length;
@@ -46,30 +31,29 @@ const model = {
 			: this.todos.forEach(todoContent => {
 					todoContent.completed = true;
 			  });
-		this.displayTodos();
 	},
 };
 
 const controller = {
-	display() {
-		model.displayTodos();
-	},
 	addTodo() {
 		const addTodoInput = document.getElementById('addTodoInput');
 		model.addTodo(addTodoInput.value);
 		addTodoInput.value = '';
+		view.display();
 	},
 	changeTodo() {
 		const changePosition = document.getElementById('changePosition');
 		const changeText = document.getElementById('changeText');
 		model.changeTodo(changePosition.valueAsNumber, changeText.value);
 		changePosition.value = '';
-		changeText.valueAsNumber = '';
+		changeText.value = '';
+		view.display();
 	},
 	delete() {
 		const deletePosition = document.getElementById('deletePosition');
 		model.deleteTodo(deletePosition.valueAsNumber);
 		deletePosition.valueAsNumber = '';
+		view.display();
 	},
 	toggleCompleted() {
 		const toggleCompletedPosition = document.getElementById(
@@ -77,9 +61,11 @@ const controller = {
 		);
 		model.toggleCompleted(toggleCompletedPosition.valueAsNumber);
 		toggleCompletedPosition.valueAsNumber = '';
+		view.display();
 	},
 	toggleAll() {
 		model.toggleAll();
+		view.display();
 	},
 };
 
