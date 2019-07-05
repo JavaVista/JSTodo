@@ -72,13 +72,15 @@ const controller = {
 		deletePosition.valueAsNumber = '';
 	},
 	toggleCompleted() {
-		const toggleCompletedPosition = document.getElementById('toggleCompletedPosition');
+		const toggleCompletedPosition = document.getElementById(
+			'toggleCompletedPosition'
+		);
 		model.toggleCompleted(toggleCompletedPosition.valueAsNumber);
 		toggleCompletedPosition.valueAsNumber = '';
 	},
 	toggleAll() {
 		model.toggleAll();
-	}
+	},
 };
 
 const view = {
@@ -87,11 +89,15 @@ const view = {
 		todosUl.innerHTML = '';
 		model.todos.forEach(todoItem => {
 			const todoLi = document.createElement('li');
-			todoLi.textContent = todoItem.todo;
+			let todoWithCompletion = '';
+			todoItem.completed === true
+				? (todoWithCompletion = `(x) ${todoItem.todo}`)
+				: (todoWithCompletion = `( ) ${todoItem.todo}`);
+			todoLi.textContent = todoWithCompletion;
 			todosUl.appendChild(todoLi);
 		});
-	}
-}
+	},
+};
 
 // test
 
