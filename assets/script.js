@@ -83,6 +83,12 @@ const view = {
 			todosUl.appendChild(todoLi);
 		});
 	},
+	deleteButton() {
+		let buttonDelete = document.createElement('button');
+		buttonDelete.textContent = 'Delete';
+		buttonDelete.className = 'deleteButton';
+		return buttonDelete;
+	}
 };
 
 // test
@@ -94,3 +100,4 @@ const view = {
 // model.toggleCompleted(0);
 // model.toggleAll();
 // model.toggleAll();
+
