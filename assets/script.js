@@ -80,6 +80,7 @@ const view = {
 				? (todoWithCompletion = `(x) ${todoItem.todo}`)
 				: (todoWithCompletion = `( ) ${todoItem.todo}`);
 			todoLi.textContent = todoWithCompletion;
+			todoLi.appendChild(this.deleteButton());
 			todosUl.appendChild(todoLi);
 		});
 	},
