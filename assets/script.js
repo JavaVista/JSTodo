@@ -91,6 +91,7 @@ const view = {
 	},
 	setEventListener() {
 		const todosUl = document.querySelector('ul');
+		// Event delegation
 		todosUl.addEventListener('click', e => {
 			// Get element that was clicked
 			const elementClicked = e.target;
