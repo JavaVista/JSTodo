@@ -49,10 +49,8 @@ const controller = {
 		changeText.value = '';
 		view.display();
 	},
-	delete() {
-		const deletePosition = document.getElementById('deletePosition');
-		model.deleteTodo(deletePosition.valueAsNumber);
-		deletePosition.valueAsNumber = '';
+	delete(position) {
+		model.deleteTodo(position);
 		view.display();
 	},
 	toggleCompleted() {
@@ -90,12 +88,19 @@ const view = {
 		buttonDelete.textContent = 'Delete';
 		buttonDelete.className = 'deleteButton';
 		return buttonDelete;
-	}
+	},
+	setEventListener() {
+		const todosUl = document.querySelector('ul');
+		todosUl.addEventListener('click', e => {
+			// Get element that was clicked
+			const elementClicked = e.target;
+			// Checked if element is a delete button
+			if (elementClicked.className === 'deleteButton')
+				controller.delete(parseInt(elementClicked.parentNode.id));
+		});
+	},
 };
-const todosUl = document.querySelector('ul');
-todosUl.addEventListener('click', e  => {
-	console.log(e.target.parentNode.id);
-});
+view.setEventListener();
 
 // test
 
@@ -106,4 +111,3 @@ todosUl.addEventListener('click', e  => {
 // model.toggleCompleted(0);
 // model.toggleAll();
 // model.toggleAll();
-
