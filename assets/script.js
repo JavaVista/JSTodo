@@ -73,12 +73,13 @@ const view = {
 	display() {
 		const todosUl = document.querySelector('ul');
 		todosUl.innerHTML = '';
-		model.todos.forEach(todoItem => {
+		model.todos.forEach((todoItem, index) => {
 			const todoLi = document.createElement('li');
 			let todoWithCompletion = '';
 			todoItem.completed === true
 				? (todoWithCompletion = `(x) ${todoItem.todo}`)
 				: (todoWithCompletion = `( ) ${todoItem.todo}`);
+			todoLi.id = index;
 			todoLi.textContent = todoWithCompletion;
 			todoLi.appendChild(this.deleteButton());
 			todosUl.appendChild(todoLi);
