@@ -92,6 +92,10 @@ const view = {
 		return buttonDelete;
 	}
 };
+const todosUl = document.querySelector('ul');
+todosUl.addEventListener('click', e  => {
+	console.log(e.target.parentNode.id);
+});
 
 // test
 
