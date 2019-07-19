@@ -19,18 +19,14 @@ const model = {
 	toggleAll() {
 		const totalTodos = this.todos.length;
 		let completedTodos = 0;
-		// get number of todos
+		// Get number of todos
 		this.todos.forEach(todoContent => {
 			todoContent.completed === true ? completedTodos++ : completedTodos;
 		});
-		// If everything is true then make false and otherwise
-		completedTodos === totalTodos
-			? this.todos.forEach(todoContent => {
-					todoContent.completed = false;
-			  })
-			: this.todos.forEach(todoContent => {
-					todoContent.completed = true;
-			  });
+		// If everything is true then make false or otherwise
+		this.todos.forEach(todoContent => {
+			completedTodos === totalTodos ? todoContent.completed = false : todoContent.completed = true;
+		});
 	},
 };
 
