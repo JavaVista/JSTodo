@@ -7,6 +7,17 @@
 	margin: 10px;
 }
 
+#footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 10px;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.79rem;
+  }
+
 ::placeholder {
 	font-style: italic;
 	color: lightgray;
