@@ -8,7 +8,7 @@ Simple Vanilla JS Todo 📔 App using MVC design pattern
 
 ![Screenshot](assets/JSTodo(iPad).png)
 
-Play - [Demo](link)
+JSTodo App - [Demo](https://javavista.github.io/JSTodo/)
 
 ## Technology
 
