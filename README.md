@@ -2,7 +2,20 @@
 
 ## General  Info
 
-Simple Vanilla JS Todo 📔 App
+Simple Vanilla JS Todo 📔 App using MVC design pattern
+
+### Screenshot
+
+![Screenshot](assets/JSTodo(iPad).png)
+
+Play - [Demo](link)
+
+## Technology
+
+- HTML5
+- CSS3
+- [Milligram CSS framework](https://milligram.io/)
+- JavaScript
 
 ## Contact / Social Media
 
