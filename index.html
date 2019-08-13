@@ -17,24 +17,53 @@
 		<title>JSTodo</title>
 	</head>
 	<body>
-		<h1>To-Do List</h1>
-		<div>
-			<button onclick="controller.toggleAll()">Toggle All</button>
-		</div>
-		<div>
-			<input type="text" name="" id="addTodoInput">
-			<button onclick="controller.addTodo()">Add</button>
-		</div>
-		<div>
-			<input id="changePosition" type="number">
-			<input id="changeText" type="text">
-			<button onclick="controller.changeTodo()">Change</button>
-		</div>
-		<div>
-			<input id="toggleCompletedPosition" type="number">
-			<button onclick="controller.toggleCompleted()">Toggle Completed</button>
-		</div>
-		<ul></ul>
-        <script src="assets/script.js"></script>
-    </body>
+		<div class="container">
+			<h1 class="header">To-Do List</h1>
+			<div>
+				Task
+				<input
+					type="text"
+					name=""
+					id="addTodoInput"
+					placeholder="Enter text..."
+				/>
+				<button onclick="controller.addTodo()">Add</button>
+			</div>
+			<div>
+				 Change Task
+				<input
+					id="changePosition"
+					type="number"
+					placeholder="Task number"
+				/>
+				<input
+					id="changeText"
+					type="text"
+					placeholder="Enter new text..."
+				/>
+				<button onclick="controller.changeTodo()">Change</button>
+			</div>
+			<div>
+				Select to Complete
+				<input
+					id="toggleCompletedPosition"
+					type="number"
+					placeholder="Task number"
+				/>
+				<button
+					class="button-outline"
+					onclick="controller.toggleCompleted()"
+				>
+					Toggle One
+				</button>
+				<button class="button-outline" onclick="controller.toggleAll()">
+					Toggle All
+				</button>
+			</div>
+			<h3 class="header">List of Tasks</h3>
+			<ul></ul>
+		</ul>
+
+		<script src="assets/script.js"></script>
+	</body>
 </html>

@@ -1,7 +1,18 @@
+.header {
+	padding-top: 20px;
+	text-align: center;
+}
+
 .deleteButton {
-    margin: 10px;
+	margin: 10px;
+}
+
+::placeholder {
+	font-style: italic;
+	color: lightgray;
+	font-size: 0.8em;
 }
 
 li {
-    list-style-type: none;
+	list-style-type: none;
 }

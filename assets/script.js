@@ -25,7 +25,9 @@ const model = {
 		});
 		// If everything is true then make false or otherwise
 		this.todos.forEach(todoContent => {
-			completedTodos === totalTodos ? todoContent.completed = false : todoContent.completed = true;
+			completedTodos === totalTodos
+				? (todoContent.completed = false)
+				: (todoContent.completed = true);
 		});
 	},
 };
